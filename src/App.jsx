@@ -197,7 +197,7 @@ const App = () => {
           onClick={userData}
           className="border-[1px] border-black cursor-pointer rounded-[10px] flex flex-col items-center justify-center w-[40px] h-[40px] p-[4px] text-[45px] bg-[#9E78CF] border-none text-white text-center"
         >
-         <FaPlus className="w-[24px]" />
+         <FaPlus className="w-[24px] text-white" />
         </button>
       </div>
       <div>
