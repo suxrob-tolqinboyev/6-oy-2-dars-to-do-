@@ -150,6 +150,8 @@
 // export default App;
 
 import { useState, useRef } from "react";
+import { MdDeleteOutline } from "react-icons/md";
+import { FaCheck } from "react-icons/fa";
 
 const App = () => {
   const [todo, setTodo] = useState([]);
@@ -209,11 +211,19 @@ const App = () => {
             >
               {item}
               <div className="flex gap-[16px]">
-                <button onClick={() => completeTask(item)} className="cursor-pointer">
-                  <img src="./src/assets/Check (1).svg" alt="" />
+                <button
+                  onClick={() => completeTask(item)}
+                  className="cursor-pointer"
+                >
+                  {/* <img src="./src/assets/Check (1).svg" alt="" /> */}
+                  <FaCheck />
                 </button>
-                <button onClick={() => removeLi(item)} className="cursor-pointer">
-                  <img src="./src/assets/TrashSimple.svg" alt="" />
+                <button
+                  onClick={() => removeLi(item)}
+                  className="cursor-pointer"
+                >
+                  {/* <img src="./src/assets/TrashSimple.svg" alt="" /> */}
+                  <MdDeleteOutline className="w-[30px]" />
                 </button>
               </div>
             </li>
@@ -221,7 +231,9 @@ const App = () => {
         </ul>
       </div>
       <div>
-        <p className="text-white pl-[65px] py-[60px] pb-[16px]">Done - {completedTasks.length}</p>
+        <p className="text-white pl-[65px] py-[60px] pb-[16px]">
+          Done - {completedTasks.length}
+        </p>
         <ul className="pl-[65px] flex gap-[16px] flex-col">
           {completedTasks.length > 0 ? (
             completedTasks.map((item, index) => (
