@@ -152,6 +152,7 @@
 import { useState, useRef } from "react";
 import { MdDeleteOutline } from "react-icons/md";
 import { FaCheck } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa6";
 
 const App = () => {
   const [todo, setTodo] = useState([]);
@@ -196,7 +197,7 @@ const App = () => {
           onClick={userData}
           className="border-[1px] border-black cursor-pointer rounded-[10px] flex flex-col items-center justify-center w-[40px] h-[40px] p-[4px] text-[45px] bg-[#9E78CF] border-none text-white text-center"
         >
-          <img className="w-[24px]" src="./src/assets/Vector (3).svg" alt="" />
+         <FaPlus className="w-[24px]" />
         </button>
       </div>
       <div>
